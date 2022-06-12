@@ -4,7 +4,7 @@ import DoList from "./DoList";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const BASEURL = "http://10.156.147.203:8080"; //192
+const BASEURL = process.env.REACT_APP_API_URL; //192
 const submit = "+";
 const Design = () => {
     const [todoListData, setTodoListData] = useState([]);
@@ -117,7 +117,7 @@ const InBody = styled.div`
     width: 400px;
     height: 500px;
     margin-top: 96px;
-    margin-left: 128px;
+    margin-left: 0px;
 `;
 
 const Title = styled.h1`

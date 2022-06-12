@@ -4,7 +4,7 @@ const registerDB = (id, password) => {
     return function () {
         axios({
             method: "post",
-            url: "http://10.156.147.203:8080/member",
+            url: process.env.REACT_APP_API_URL + "/member",
             data: {
                 accountId: id,
                 password: password,
